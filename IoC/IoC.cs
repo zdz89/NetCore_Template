@@ -1,13 +1,12 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using NetCore_Template.Data;
+﻿using Microsoft.Extensions.Configuration;
 
 namespace NetCore_Template.IoC
 {
     /// <summary>
-    /// Stores DI services
+    /// Dependancy injection container using .Net Core provider
     /// </summary>
     public class IoC
     {
-        public static ApplicationDbContext ApplicationDbContext => IoCContainer.ServiceProvider.GetService<ApplicationDbContext>();
+        public static IConfiguration Configuration { get; set; }
     }
 }

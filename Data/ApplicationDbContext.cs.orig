@@ -7,8 +7,15 @@ namespace NetCore_Template.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, int>
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+<<<<<<< HEAD
+        public ApplicationDbContext(DbContextOptionsBuilder<ApplicationDbContext> options)
+        {
+
+        }
+=======
+        public ApplicationDbContext(DbContextOptions options) : base(options)
         { }
+>>>>>>> Initial commit
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
